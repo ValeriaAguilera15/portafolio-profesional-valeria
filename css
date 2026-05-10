@@ -1,32 +1,53 @@
-/* Colores personalizados de Valeria */
+/* Color principal de Valeria (Morado Figma) */
 :root {
-    --color-principal: #6366f1; /* El morado de tu Figma */
+    --color-principal: #6366f1;
+    --color-hover: #4f46e5;
 }
 
+/* Tipografía Poppins */
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
 }
 
-.text-primary {
+/* Colores personalizados */
+.text-custom-color {
     color: var(--color-principal) !important;
 }
 
-/* Estilo para el botón igual al diseño */
+/* Estilo del botón principal */
 .btn-custom {
     background-color: var(--color-principal) !important;
     border: none;
     border-radius: 8px;
+    padding: 12px 24px;
     transition: all 0.3s ease;
 }
 
 .btn-custom:hover {
-    background-color: #4f46e5 !important;
+    background-color: var(--color-hover) !important;
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+    box-shadow: 0 5px 15px rgba(99, 102, 241, 0.3);
 }
 
-/* Estilo para los cuadros de texto */
-.form-control:focus {
-    border-color: var(--color-principal);
-    box-shadow: 0 0 0 0.25rem rgba(99, 102, 241, 0.15);
+/* Estilo del botón del menú */
+.btn-custom-outline {
+    border-color: var(--color-principal) !important;
+    color: var(--color-principal) !important;
+    border-radius: 8px;
+}
+
+.btn-custom-outline:hover {
+    background-color: var(--color-principal) !important;
+    color: white !important;
+}
+
+/* Tarjetas de Habilidades al hacer hover */
+.skill-card {
+    transition: 0.3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
 }
