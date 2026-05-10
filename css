@@ -1,0 +1,16 @@
+/* Estilos personalizados para el portafolio de Valeria */
+
+.btn-custom {
+    background-color: #6366f1 !important; /* El morado de tu diseño */
+    border: none;
+    font-weight: 600;
+}
+
+.btn-custom:hover {
+    background-color: #4f46e5 !important; /* Un morado más oscuro al pasar el mouse */
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #6366f1;
+    box-shadow: 0 0 0 0.25rem rgba(99, 102, 241, 0.25);
+}
