@@ -1,16 +1,32 @@
-/* Estilos personalizados para el portafolio de Valeria */
+/* Colores personalizados de Valeria */
+:root {
+    --color-principal: #6366f1; /* El morado de tu Figma */
+}
 
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.text-primary {
+    color: var(--color-principal) !important;
+}
+
+/* Estilo para el botón igual al diseño */
 .btn-custom {
-    background-color: #6366f1 !important; /* El morado de tu diseño */
+    background-color: var(--color-principal) !important;
     border: none;
-    font-weight: 600;
+    border-radius: 8px;
+    transition: all 0.3s ease;
 }
 
 .btn-custom:hover {
-    background-color: #4f46e5 !important; /* Un morado más oscuro al pasar el mouse */
+    background-color: #4f46e5 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
 }
 
-.form-control:focus, .form-select:focus {
-    border-color: #6366f1;
-    box-shadow: 0 0 0 0.25rem rgba(99, 102, 241, 0.25);
+/* Estilo para los cuadros de texto */
+.form-control:focus {
+    border-color: var(--color-principal);
+    box-shadow: 0 0 0 0.25rem rgba(99, 102, 241, 0.15);
 }
