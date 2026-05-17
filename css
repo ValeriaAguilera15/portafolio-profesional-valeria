@@ -53,7 +53,7 @@ body {
     color: #ffffff !important;
 }
 
-/* Tarjetas de Skills (Estilo limpio) */
+/* Tarjetas de Skills */
 .skill-card {
     border-color: #eaeaea !important;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -84,7 +84,7 @@ body {
     object-fit: cover;
 }
 
-/* Formulario optimizado según tu Figma */
+/* Formulario optimizado */
 .max-form-width {
     max-width: 650px;
     margin: 0 auto;

@@ -22,7 +22,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <div class="navbar-nav ms-auto fw-medium">
                     <a class="nav-link mx-2 text-primary" href="#home">Home</a>
-                    <a class="nav-link mx-2" href="#skills">Portfolio</a>
+                    <a class="nav-link mx-2" href="#portfolio">Portfolio</a>
                     <a class="nav-link mx-2" href="#about">About me</a>
                     <a class="btn btn-outline-primary ms-lg-3 btn-custom-outline" href="#contacto">Contact Me</a>
                 </div>
@@ -111,8 +111,8 @@
             <div class="row g-4">
                 <div class="col-md-4">
                     <div class="project-card border-0 bg-light rounded-4 p-3 h-100 shadow-sm">
-                        <img src="img/suba.png" alt="S.U.B.A. Buses Autónomos Proyecto UNEG" class="img-fluid rounded-3 mb-3">
-                        <h5 class="fw-bold text-dark">S.U.B.A. - Buses Autónomos (Proyecto UNEG)</h5>
+                        <img src="img/suba.png" alt="S.U.B.A. Buses Autónomos" class="img-fluid rounded-3 mb-3">
+                        <h5 class="fw-bold text-dark">S.U.B.A. - Buses Autónomos (Proyecto de Clase)</h5>
                         <p class="small text-muted mb-0">Análisis y diseño de interfaz para un sistema de transporte universitario autónomo. Un reto de ingeniería que une lógica de sistemas con experiencia de usuario (UX).</p>
                     </div>
                 </div>
@@ -125,7 +125,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="project-card border-0 bg-light rounded-4 p-3 h-100 shadow-sm">
-                        <img src="img/suplementos.png" alt="Catálogo de Suplementos Canva Branding" class="img-fluid rounded-3 mb-3">
+                        <img src="img/suplementos.png" alt="Catálogo de Suplementos" class="img-fluid rounded-3 mb-3">
                         <h5 class="fw-bold text-dark">Catálogo de Suplementos (Canva/Branding)</h5>
                         <p class="small text-muted mb-0">Creación de un catálogo comercial estratégico para un cliente del sector salud. Diseño visual enfocado en la conversión, jerarquía de productos y coherencia de marca.</p>
                     </div>
@@ -139,40 +139,40 @@
             <h2 class="display-5 fw-bold text-dark mb-3">¡Hablemos de tu próximo proyecto!</h2>
             <p class="text-muted mb-5">¿Tienes una idea tecnológica en mente o necesitas apoyo con la gestión de tu marca?<br>Escríbeme y busquemos la mejor solución juntos.</p>
             
-            <form class="row g-4 text-start">
+            <form id="whatsappForm" class="row g-4 text-start">
                 <div class="col-md-6">
                     <label class="form-label small fw-medium text-secondary">First name</label>
-                    <input type="text" class="form-control custom-input">
+                    <input type="text" id="firstName" class="form-control custom-input" required>
                 </div>
                 <div class="col-md-6">
                     <label class="form-label small fw-medium text-secondary">Last name</label>
-                    <input type="text" class="form-control custom-input">
+                    <input type="text" id="lastName" class="form-control custom-input" required>
                 </div>
                 <div class="col-md-6">
                     <label class="form-label small fw-medium text-secondary">Email</label>
-                    <input type="email" class="form-control custom-input">
+                    <input type="email" id="email" class="form-control custom-input" required>
                 </div>
                 <div class="col-md-6">
                     <label class="form-label small fw-medium text-secondary">Phone number</label>
-                    <input type="tel" class="form-control custom-input">
+                    <input type="tel" id="phone" class="form-control custom-input">
                 </div>
                 <div class="col-12">
                     <label class="form-label small fw-medium text-secondary">Choose a topic</label>
-                    <select class="form-select custom-input text-muted">
-                        <option selected disabled>Select one...</option>
-                        <option>Desarrollo Web (Frontend)</option>
-                        <option>Diseño de Interfaces (UI/UX)</option>
-                        <option>Social Media & Branding</option>
-                        <option>Asistencia Virtual / IT</option>
+                    <select id="topic" class="form-select custom-input text-muted" required>
+                        <option selected disabled value="">Select one...</option>
+                        <option value="Desarrollo Web (Frontend)">Desarrollo Web (Frontend)</option>
+                        <option value="Diseño de Interfaces (UI/UX)">Diseño de Interfaces (UI/UX)</option>
+                        <option value="Social Media & Branding">Social Media & Branding</option>
+                        <option value="Asistencia Virtual / IT">Asistencia Virtual / IT</option>
                     </select>
                 </div>
                 <div class="col-12">
                     <label class="form-label small fw-medium text-secondary">Message</label>
-                    <textarea class="form-control custom-input" rows="5" placeholder="Type your message..."></textarea>
+                    <textarea id="message" class="form-control custom-input" rows="5" placeholder="Type your message..." required></textarea>
                 </div>
                 <div class="col-12">
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="gridCheck">
+                        <input class="form-check-input" type="checkbox" id="gridCheck" required>
                         <label class="form-check-label text-muted small" for="gridCheck">
                             I accept the terms
                         </label>
@@ -192,5 +192,36 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        document.getElementById('whatsappForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Evita que la página se recargue
+
+            // Capturar los valores del formulario
+            const firstName = document.getElementById('firstName').value;
+            const lastName = document.getElementById('lastName').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value || 'No indicado';
+            const topic = document.getElementById('topic').value;
+            const message = document.getElementById('message').value;
+
+            // Tu número de WhatsApp en formato internacional (Código de Venezuela 58)
+            const whatsappNumber = "584121146784";
+
+            // Construir el mensaje formateado de forma limpia
+            const text = `¡Hola, Valeria! Un cliente te ha contactado desde tu Portafolio Web.%0A%0A` +
+                         `*Nombre:* ${firstName} ${lastName}%0A` +
+                         `*Correo:* ${email}%0A` +
+                         `*Teléfono:* ${phone}%0A` +
+                         `*Interés:* ${topic}%0A` +
+                         `*Mensaje:* ${message}`;
+
+            // Crear el enlace URL de la API de WhatsApp
+            const whatsappUrl = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${text}`;
+
+            // Abrir en una pestaña nueva
+            window.open(whatsappUrl, '_blank');
+        });
+    </script>
 </body>
 </html>
