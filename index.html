@@ -7,22 +7,22 @@
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="css/estilos.css">
 </head>
-<body class="bg-light">
+<body>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm py-3">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top py-3 shadow-sm">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="#">VALERIA</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <a class="navbar-brand fw-bold text-dark" href="#">VALERIA</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <div class="navbar-nav ms-auto">
-                    <a class="nav-link mx-2" href="#home">Home</a>
-                    <a class="nav-link mx-2" href="#portfolio">Portfolio</a>
+                <div class="navbar-nav ms-auto fw-medium">
+                    <a class="nav-link mx-2 text-primary" href="#home">Home</a>
+                    <a class="nav-link mx-2" href="#skills">Portfolio</a>
                     <a class="nav-link mx-2" href="#about">About me</a>
                     <a class="btn btn-outline-primary ms-lg-3 btn-custom-outline" href="#contacto">Contact Me</a>
                 </div>
@@ -30,78 +30,165 @@
         </div>
     </nav>
 
-    <header id="home" class="py-5 bg-white border-bottom shadow-sm">
+    <header id="home" class="py-5 bg-white">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 text-center text-lg-start">
-                    <h5 class="text-custom-color fw-bold small text-uppercase">HOLA, SOY VALERIA</h5>
-                    <h1 class="display-3 fw-bold text-dark mb-4">Diseño experiencias digitales y soluciones de ingeniería</h1>
-                    <p class="lead text-muted mb-5">Estudiante de Ingeniería - UNEG 2026</p>
-                    <a href="#contacto" class="btn btn-primary btn-lg px-5 py-3 btn-custom fw-bold">Get in Touch</a>
+                    <p class="text-primary fw-bold mb-2 tracking-wide">HOLA, SOY VALERIA</p>
+                    <h1 class="display-4 fw-bold text-dark mb-4 lh-sm">Diseño experiencias digitales y soluciones de ingeniería</h1>
+                    <a href="#contacto" class="btn btn-primary btn-lg px-4 py-3 btn-custom fw-bold shadow-sm">Get In Touch</a>
                 </div>
                 <div class="col-lg-6 mt-5 mt-lg-0">
-                    <img src="img/hero.png" alt="Valeria - Portafolio" class="img-fluid rounded shadow-lg mx-auto d-block">
+                    <img src="img/hero.png" alt="Valeria - Portafolio e Ingeniería" class="img-fluid rounded-4 mx-auto d-block hero-img">
                 </div>
             </div>
         </div>
     </header>
 
-    <section id="portfolio" class="py-5 bg-white">
+    <section id="skills" class="py-5 bg-white">
         <div class="container">
-            <div class="text-center mb-5">
-                <p class="text-muted mb-1 small">My Skills</p>
-                <h2 class="display-5 fw-bold text-dark">Servicios/Experiencia</h2>
+            <div class="mb-5">
+                <p class="text-muted small mb-1">My Skills</p>
+                <h2 class="fw-bold text-dark display-6">Servicios/Experiencia.</h2>
             </div>
-            <div class="row g-4 text-center">
-                <div class="col-md-3">
-                    <div class="skill-card p-4 h-100 bg-white shadow-sm rounded-4 border">
-                        <div class="icon-box display-4 mb-3">💻</div>
-                        <h5 class="fw-bold">Desarrollo Web (Frontend)</h5>
-                        <p class="small text-muted mb-0">Maquetación moderna con HTML5, CSS3 y JS.</p>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="skill-card p-4 bg-white border rounded-4 h-100 shadow-sm">
+                        <img src="img/icon-code.png" alt="Desarrollo Web" class="img-fluid icon-skill mb-3">
+                        <h5 class="fw-bold text-dark fs-5">Desarrollo Web<br>(Frontend)</h5>
+                        <p class="small text-muted mt-3 mb-0">Creación de sitios web modernos y adaptables usando HTML5 y CSS3. Enfocada en escribir código limpio y estructuras funcionales.</p>
                     </div>
                 </div>
-                <div class="col-md-3">
-                    <div class="skill-card p-4 h-100 bg-white shadow-sm rounded-4 border">
-                        <div class="icon-box display-4 mb-3">🎨</div>
-                        <h5 class="fw-bold">Diseño de Interfaces (UI/UX)</h5>
-                        <p class="small text-muted mb-0">Diseño de prototipos interactivos en Figma.</p>
+                <div class="col-md-6 col-lg-3">
+                    <div class="skill-card p-4 bg-white border rounded-4 h-100 shadow-sm">
+                        <img src="img/icon-figma.png" alt="Diseño UI/UX" class="img-fluid icon-skill mb-3">
+                        <h5 class="fw-bold text-dark fs-5">Diseño de Interfaces<br>(UI/UX)</h5>
+                        <p class="small text-muted mt-3 mb-0">Diseño de prototipos interactivos y atractivos en Figma. Mi objetivo es que las plataformas sean fáciles de usar para todos.</p>
                     </div>
                 </div>
-                <div class="col-md-3">
-                    <div class="skill-card p-4 h-100 bg-white shadow-sm rounded-4 border">
-                        <div class="icon-box display-4 mb-3">📱</div>
-                        <h5 class="fw-bold">Social Media & Branding</h5>
-                        <p class="small text-muted mb-0">Gestión estratégica de comunidades online.</p>
+                <div class="col-md-6 col-lg-3">
+                    <div class="skill-card p-4 bg-white border rounded-4 h-100 shadow-sm">
+                        <img src="img/icon-tag.png" alt="Social Media Strategy" class="img-fluid icon-skill mb-3">
+                        <h5 class="fw-bold text-dark fs-5">Social Media &<br>Branding</h5>
+                        <p class="small text-muted mt-3 mb-0">Gestión de comunidades y creación de contenido visual estratégico. Experiencia previa como Community Manager.</p>
                     </div>
                 </div>
-                <div class="col-md-3">
-                    <div class="skill-card p-4 h-100 bg-white shadow-sm rounded-4 border">
-                        <div class="icon-box display-4 mb-3">⚙️</div>
-                        <h5 class="fw-bold">Asistencia Virtual & IT</h5>
-                        <p class="small text-muted mb-0">Apoyo administrativo y organización de procesos.</p>
+                <div class="col-md-6 col-lg-3">
+                    <div class="skill-card p-4 bg-white border rounded-4 h-100 shadow-sm">
+                        <img src="img/icon-gear.png" alt="Asistencia Virtual IT" class="img-fluid icon-skill mb-3">
+                        <h5 class="fw-bold text-dark fs-5">Asistencia Virtual &<br>IT</h5>
+                        <p class="small text-muted mt-3 mb-0">Apoyo administrativo y soporte técnico eficiente. Organización de procesos y gestión de herramientas digitales.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="about" class="py-5 bg-light border-top">
+    <section id="about" class="py-5 bg-white border-top">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-5 mb-lg-0">
-                    <img src="img/perfil.png" alt="Valeria - Creativa" class="img-fluid rounded-4 shadow-lg mx-auto d-block">
+                    <img src="img/perfil.png" alt="Sobre mí - Valeria" class="img-fluid rounded-4 mx-auto d-block profile-img">
                 </div>
-                <div class="col-lg-6 text-center text-lg-start">
-                    <h2 class="display-4 fw-bold text-custom-color mb-4 text-uppercase">Sobre Mí</h2>
-                    <p class="lead mb-4">¡Hola! Soy Valeria, estudiante de ingeniería en informática y apasionada por el desarrollo de soluciones tecnológicas funcionales.</p>
-                    <p class="text-muted mb-4">Me especializo en crear estructuras web limpias, utilizando herramientas como Visual Studio Code e Illustrator para dar vida a ideas creativas de forma lógica y eficiente.</p>
+                <div class="col-lg-6 ps-lg-5">
+                    <h2 class="display-4 fw-black text-primary mb-4 tracking-tight">SOBRE MI</h2>
+                    <div class="about-text text-dark">
+                        <p class="mb-4">¡Hola! Soy Valeria, estudiante de Ingeniería en informática y apasionada por el desarrollo de soluciones tecnológicas funcionales. Actualmente estoy culminando mi formación académica, enfocándome en transformar conceptos lógicos en herramientas digitales que ayuden a emprendedores y empresas a optimizar su presencia online.</p>
+                        <p class="mb-4">A lo largo de mi carrera, he desarrollado habilidades en maquetación web (HTML/CSS) y diseño de interfaces en Figma, además de contar con experiencia práctica como Virtual Assistant y Community Manager. Esta combinación me permite no solo entender el código detrás de una web, sino también la estrategia digital y la experiencia del usuario que hay detrás de cada proyecto.</p>
+                        <p class="mb-4">Me especializo en crear estructuras web limpias y funcionales, utilizando herramientas como Visual Studio Code e Illustrator para dar vida a ideas creativas. Mi enfoque es el aprendizaje continuo y la resolución de problemas de forma lógica y eficiente.</p>
+                        <p class="fw-medium">Si buscas a alguien con energía, bases de ingeniería sólidas y compromiso para impulsar tu proyecto digital, estaré encantada de colaborar contigo.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="bg-dark text-white text-center py-4">
-        <p class="mb-0 small">&copy; 2026 Valeria Aguilera - Proyecto Universitario UNEG</p>
+    <section id="portfolio" class="py-5 bg-white border-top">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-black text-primary tracking-tight">PORTAFOLIO</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="project-card border-0 bg-light rounded-4 p-3 h-100 shadow-sm">
+                        <img src="img/suba.png" alt="S.U.B.A. Buses Autónomos Proyecto UNEG" class="img-fluid rounded-3 mb-3">
+                        <h5 class="fw-bold text-dark">S.U.B.A. - Buses Autónomos (Proyecto UNEG)</h5>
+                        <p class="small text-muted mb-0">Análisis y diseño de interfaz para un sistema de transporte universitario autónomo. Un reto de ingeniería que une lógica de sistemas con experiencia de usuario (UX).</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="project-card border-0 bg-light rounded-4 p-3 h-100 shadow-sm">
+                        <img src="img/inmijobs.png" alt="Inmijobs UI Case Study" class="img-fluid rounded-3 mb-3">
+                        <h5 class="fw-bold text-dark">Inmijobs (UI Case Study)</h5>
+                        <p class="small text-muted mb-0">Prototipado de alta fidelidad para una plataforma de búsqueda de empleo. Enfoque en componentes reutilizables, jerarquía visual y navegación intuitiva.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="project-card border-0 bg-light rounded-4 p-3 h-100 shadow-sm">
+                        <img src="img/suplementos.png" alt="Catálogo de Suplementos Canva Branding" class="img-fluid rounded-3 mb-3">
+                        <h5 class="fw-bold text-dark">Catálogo de Suplementos (Canva/Branding)</h5>
+                        <p class="small text-muted mb-0">Creación de un catálogo comercial estratégico para un cliente del sector salud. Diseño visual enfocado en la conversión, jerarquía de productos y coherencia de marca.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="py-5 bg-white border-top">
+        <div class="container text-center max-form-width">
+            <h2 class="display-5 fw-bold text-dark mb-3">¡Hablemos de tu próximo proyecto!</h2>
+            <p class="text-muted mb-5">¿Tienes una idea tecnológica en mente o necesitas apoyo con la gestión de tu marca?<br>Escríbeme y busquemos la mejor solución juntos.</p>
+            
+            <form class="row g-4 text-start">
+                <div class="col-md-6">
+                    <label class="form-label small fw-medium text-secondary">First name</label>
+                    <input type="text" class="form-control custom-input">
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label small fw-medium text-secondary">Last name</label>
+                    <input type="text" class="form-control custom-input">
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label small fw-medium text-secondary">Email</label>
+                    <input type="email" class="form-control custom-input">
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label small fw-medium text-secondary">Phone number</label>
+                    <input type="tel" class="form-control custom-input">
+                </div>
+                <div class="col-12">
+                    <label class="form-label small fw-medium text-secondary">Choose a topic</label>
+                    <select class="form-select custom-input text-muted">
+                        <option selected disabled>Select one...</option>
+                        <option>Desarrollo Web (Frontend)</option>
+                        <option>Diseño de Interfaces (UI/UX)</option>
+                        <option>Social Media & Branding</option>
+                        <option>Asistencia Virtual / IT</option>
+                    </select>
+                </div>
+                <div class="col-12">
+                    <label class="form-label small fw-medium text-secondary">Message</label>
+                    <textarea class="form-control custom-input" rows="5" placeholder="Type your message..."></textarea>
+                </div>
+                <div class="col-12">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="gridCheck">
+                        <label class="form-check-label text-muted small" for="gridCheck">
+                            I accept the terms
+                        </label>
+                    </div>
+                </div>
+                <div class="col-12 text-center mt-4">
+                    <button type="submit" class="btn btn-primary px-5 py-2 btn-custom fw-medium">Enviar mensaje</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer class="bg-white border-top py-4 text-center">
+        <div class="container">
+            <p class="text-muted small mb-0">&copy; 2026 Valeria Aguilera. Todos los derechos reservados. Ingeniería en Computación - UNEG.</p>
+        </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

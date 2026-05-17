@@ -1,53 +1,103 @@
-/* Color principal de Valeria (Morado Figma) */
+/* Paleta de colores e inicialización */
 :root {
-    --color-principal: #6366f1;
-    --color-hover: #4f46e5;
+    --morado-figma: #6366f1;
+    --morado-hover: #4f46e5;
 }
 
-/* Tipografía Poppins */
 body {
     font-family: 'Poppins', sans-serif;
-    color: #333;
+    background-color: #ffffff;
 }
 
-/* Colores personalizados */
-.text-custom-color {
-    color: var(--color-principal) !important;
+/* Tipografías especiales */
+.fw-black {
+    font-weight: 900;
 }
 
-/* Estilo del botón principal */
+.tracking-wide {
+    letter-spacing: 1.5px;
+}
+
+.tracking-tight {
+    letter-spacing: -1px;
+}
+
+/* Ajustes de imágenes hero y perfil */
+.hero-img, .profile-img {
+    max-height: 480px;
+    object-fit: contain;
+}
+
+/* Estilo de botones */
 .btn-custom {
-    background-color: var(--color-principal) !important;
+    background-color: var(--morado-figma) !important;
     border: none;
     border-radius: 8px;
-    padding: 12px 24px;
-    transition: all 0.3s ease;
+    padding: 10px 28px;
+    transition: all 0.2s ease-in-out;
 }
 
 .btn-custom:hover {
-    background-color: var(--color-hover) !important;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(99, 102, 241, 0.3);
+    background-color: var(--morado-hover) !important;
+    transform: translateY(-1px);
 }
 
-/* Estilo del botón del menú */
 .btn-custom-outline {
-    border-color: var(--color-principal) !important;
-    color: var(--color-principal) !important;
+    border-color: var(--morado-figma) !important;
+    color: var(--morado-figma) !important;
     border-radius: 8px;
 }
 
 .btn-custom-outline:hover {
-    background-color: var(--color-principal) !important;
-    color: white !important;
+    background-color: var(--morado-figma) !important;
+    color: #ffffff !important;
 }
 
-/* Tarjetas de Habilidades al hacer hover */
+/* Tarjetas de Skills (Estilo limpio) */
 .skill-card {
-    transition: 0.3s;
+    border-color: #eaeaea !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .skill-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(99, 102, 241, 0.08) !important;
+}
+
+.icon-skill {
+    height: 36px;
+    object-fit: contain;
+}
+
+/* Tarjetas de Proyectos */
+.project-card {
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-3px);
+}
+
+.project-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+/* Formulario optimizado según tu Figma */
+.max-form-width {
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.custom-input {
+    border: 1px solid #d1d5db !important;
+    border-radius: 8px !important;
+    padding: 10px 14px !important;
+    font-size: 0.95rem;
+}
+
+.custom-input:focus {
+    border-color: var(--morado-figma) !important;
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15) !important;
 }
