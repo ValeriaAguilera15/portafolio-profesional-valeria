@@ -1,15 +1,8 @@
-/* Paleta de colores e inicialización */
-:root {
-    --morado-figma: #6366f1;
-    --morado-hover: #4f46e5;
-}
-
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #ffffff;
 }
 
-/* Tipografías especiales */
 .fw-black {
     font-weight: 900;
 }
@@ -22,15 +15,26 @@ body {
     letter-spacing: -1px;
 }
 
-/* Ajustes de imágenes hero y perfil */
+.text-purple {
+    color: #6366f1 !important;
+}
+
+.btn-purple {
+    background-color: #6366f1 !important;
+    color: #ffffff !important;
+}
+
+.btn-outline-purple {
+    border-color: #6366f1 !important;
+    color: #6366f1 !important;
+}
+
 .hero-img, .profile-img {
     max-height: 480px;
     object-fit: contain;
 }
 
-/* Estilo de botones */
 .btn-custom {
-    background-color: var(--morado-figma) !important;
     border: none;
     border-radius: 8px;
     padding: 10px 28px;
@@ -38,22 +42,19 @@ body {
 }
 
 .btn-custom:hover {
-    background-color: var(--morado-hover) !important;
+    background-color: #4f46e5 !important;
     transform: translateY(-1px);
 }
 
 .btn-custom-outline {
-    border-color: var(--morado-figma) !important;
-    color: var(--morado-figma) !important;
     border-radius: 8px;
 }
 
 .btn-custom-outline:hover {
-    background-color: var(--morado-figma) !important;
+    background-color: #6366f1 !important;
     color: #ffffff !important;
 }
 
-/* Tarjetas de Skills */
 .skill-card {
     border-color: #eaeaea !important;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -69,7 +70,6 @@ body {
     object-fit: contain;
 }
 
-/* Tarjetas de Proyectos */
 .project-card {
     transition: transform 0.3s ease;
 }
@@ -84,7 +84,6 @@ body {
     object-fit: cover;
 }
 
-/* Formulario optimizado */
 .max-form-width {
     max-width: 650px;
     margin: 0 auto;
@@ -98,7 +97,7 @@ body {
 }
 
 .custom-input:focus {
-    border-color: var(--morado-figma) !important;
+    border-color: #6366f1 !important;
     box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15) !important;
 }
 
