@@ -38,7 +38,7 @@
                 <div class="col-lg-6 text-center text-lg-start">
                     <p class="text-purple fw-bold mb-2 tracking-wide">HOLA, SOY VALERIA</p>
                     <h1 class="display-4 fw-bold text-dark mb-4 lh-sm">Diseño experiencias digitales y soluciones de ingeniería</h1>
-                    <a href="#contacto" class="btn btn-purple btn-lg px-4 py-3 btn-custom fw-bold shadow-sm">Escríbeme</a>
+                    <a href="#contacto" class="btn btn-purple btn-purple btn-lg px-4 py-3 btn-custom fw-bold shadow-sm">Escríbeme</a>
                 </div>
                 <div class="col-lg-6 mt-5 mt-lg-0">
                     <img src="./img/hero.png" alt="Valeria - Portafolio e Ingeniería" class="img-fluid rounded-4 mx-auto d-block hero-img">
@@ -53,35 +53,7 @@
                 <p class="text-muted small mb-1">Mis Habilidades</p>
                 <h2 class="fw-bold text-dark display-6">Servicios y Experiencia.</h2>
             </div>
-            <div class="row g-4">
-                <div class="col-md-6 col-lg-3">
-                    <div class="skill-card p-4 bg-white border rounded-4 h-100 shadow-sm">
-                        <img src="./img/icon-code.png" alt="Desarrollo Web" class="img-fluid icon-skill mb-3">
-                        <h5 class="fw-bold text-dark fs-5">Desarrollo Web<br>(Frontend)</h5>
-                        <p class="small text-muted mt-3 mb-0">Creación de sitios web modernos y adaptables usando HTML5 y CSS3. Enfocada en escribir código limpio y estructuras funcionales.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="skill-card p-4 bg-white border rounded-4 h-100 shadow-sm">
-                        <img src="./img/icon-figma.png" alt="Diseño UI/UX" class="img-fluid icon-skill mb-3">
-                        <h5 class="fw-bold text-dark fs-5">Diseño de Interfaces<br>(UI/UX)</h5>
-                        <p class="small text-muted mt-3 mb-0">Diseño de prototipos interactivos y atractivos en Figma. Mi objetivo es que las plataformas sean fáciles de usar para todos.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="skill-card p-4 bg-white border rounded-4 h-100 shadow-sm">
-                        <img src="./img/icon-tag.png" alt="Social Media Strategy" class="img-fluid icon-skill mb-3">
-                        <h5 class="fw-bold text-dark fs-5">Social Media &<br>Branding</h5>
-                        <p class="small text-muted mt-3 mb-0">Gestión de comunidades y creación de contenido visual estratégico. Experiencia previa como Community Manager.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="skill-card p-4 bg-white border rounded-4 h-100 shadow-sm">
-                        <img src="./img/icon-gear.png" alt="Asistencia Virtual IT" class="img-fluid icon-skill mb-3">
-                        <h5 class="fw-bold text-dark fs-5">Asistencia Virtual &<br>IT</h5>
-                        <p class="small text-muted mt-3 mb-0">Apoyo administrativo y soporte técnico eficiente. Organización de procesos y gestión de herramientas digitales.</p>
-                    </div>
-                </div>
+            <div class="row g-4" id="contenedor-servicios">
             </div>
         </div>
     </section>
@@ -110,9 +82,8 @@
             <div class="text-center mb-5">
                 <h2 class="display-5 fw-black text-purple tracking-tight">PORTAFOLIO</h2>
             </div>
-            
             <div class="row g-4" id="contenedor-proyectos">
-                </div>
+            </div>
         </div>
     </section>
 
@@ -174,9 +145,11 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/index.js"></script>
 
     <script>
-        document.getElementById('whatsappForm').addEventListener('submit', function(event) {
+        document.getElementById('whatsappForm').addEventListener('submit', async function(event) {
             event.preventDefault();
 
             const firstName = document.getElementById('firstName').value;
@@ -186,8 +159,19 @@
             const topic = document.getElementById('topic').value;
             const message = document.getElementById('message').value;
 
-            const whatsappNumber = "584121146784";
+            if (typeof _supabase !== 'undefined') {
+                await _supabase
+                    .from('contacto')
+                    .insert([
+                        { 
+                            nombre: `${firstName} ${lastName}`, 
+                            correo: email, 
+                            mensaje: `[Interés: ${topic}] - ${message}` 
+                        }
+                    ]);
+            }
 
+            const whatsappNumber = "584121146784";
             const text = `¡Hola, Valeria! Un cliente te ha contactado desde tu Portafolio Web.%0A%0A` +
                          `*Nombre:* ${firstName} ${lastName}%0A` +
                          `*Correo:* ${email}%0A` +
@@ -196,7 +180,6 @@
                          `*Mensaje:* ${message}`;
 
             const whatsappUrl = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${text}`;
-
             window.open(whatsappUrl, '_blank');
         });
     </script>
