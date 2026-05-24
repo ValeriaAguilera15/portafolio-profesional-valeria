@@ -29,6 +29,10 @@ body {
     color: #6366f1 !important;
 }
 
+.bg-light-purple {
+    background-color: #f8f5ff !important;
+}
+
 .hero-img, .profile-img {
     max-height: 480px;
     object-fit: contain;
@@ -48,6 +52,7 @@ body {
 
 .btn-custom-outline {
     border-radius: 8px;
+    transition: all 0.2s ease-in-out;
 }
 
 .btn-custom-outline:hover {
