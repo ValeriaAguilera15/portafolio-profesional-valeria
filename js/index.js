@@ -60,8 +60,7 @@ async function cargarPortafolio() {
                     <div class="skill-card p-4 bg-white border rounded-4 h-100 shadow-sm">
                         <img src="${icono}" alt="${s.titulo}" class="img-fluid icon-skill mb-3">
                         <h5 class="fw-bold text-dark fs-5">${s.titulo}</h5>
-                        <p class="small text-muted mt-3 mb-4">${s.descripcion}</p>
-                        <span class="fw-bold text-purple bg-light px-3 py-2 rounded-3 small">Desde: $${s.precio}</span>
+                        <p class="small text-muted mt-3 mb-0">${s.descripcion}</p>
                     </div>
                 </div>
             `;
